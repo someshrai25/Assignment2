@@ -1,9 +1,8 @@
 import time
 
+import allure
 import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.edge.service import Service as EdgeService
@@ -13,6 +12,7 @@ def pytest_addoption(parser):
     parser.addoption("--browser_name",action= "store",default="chrome")
 
 @pytest.fixture(scope="class")
+@allure.feature("test")
 def setUp(request):
     browser_name = request.config.getoption("browser_name")
     if browser_name == "chrome":

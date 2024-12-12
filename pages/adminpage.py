@@ -1,6 +1,4 @@
 from selenium.webdriver.common.by import By
-import datetime
-import os
 import time
 
 class AdminPage:
@@ -12,7 +10,7 @@ class AdminPage:
     systemuser = "(//input[@class='oxd-input oxd-input--active'])[2]"
     searchbtn = "//button[@type='submit']"
     resetbtn = "//button[@class='oxd-button oxd-button--medium oxd-button--ghost']"
-    msg = "//div[text()='Avinash1']"
+    msg = "//div[text()='Admin']"
 
     def Admin(self):
         self.driver.find_element(By.XPATH, self.admin).click()
