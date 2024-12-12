@@ -16,7 +16,7 @@ class TestLogin(BaseClass):
 
     def test_user_search(self):
         ap = AdminPage(self.driver)
-        ap.userSearch("Admin1234567")
+        ap.userSearch("Avinash1")
         result = ap.verifySuccessfulSearch()
         assert result == True
 

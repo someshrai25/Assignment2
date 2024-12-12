@@ -12,7 +12,7 @@ class AdminPage:
     systemuser = "(//input[@class='oxd-input oxd-input--active'])[2]"
     searchbtn = "//button[@type='submit']"
     resetbtn = "//button[@class='oxd-button oxd-button--medium oxd-button--ghost']"
-    msg = "//div[text()='Admin1234567']"
+    msg = "//div[text()='Avinash1']"
 
     def Admin(self):
         self.driver.find_element(By.XPATH, self.admin).click()
